@@ -19,12 +19,16 @@ const Navigation = () => {
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Contact", href: "#contact" },
-    { label: "Enquiry", href: "#enquiry" },
+    { label: "Enquiry", href: "https://form.jotform.com/252914257700051", external: true },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.replace('#', ''));
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (item: typeof navItems[0]) => {
+    if (item.external) {
+      window.open(item.href, '_blank');
+    } else {
+      const element = document.getElementById(item.href.replace('#', ''));
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -41,8 +45,8 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="text-3xl font-bold">
-              <span className="font-serif italic text-primary-foreground">S</span>
-              <span className="text-primary-foreground ml-1">mart Water Solution</span>
+              <span style={{ fontFamily: "'Pinyon Script', cursive" }} className="text-5xl text-white">S</span>
+              <span className="text-white ml-1">mart Water Solution</span>
             </div>
           </div>
 
@@ -51,7 +55,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item)}
                 className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.label}
@@ -75,7 +79,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.href}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item)}
                   className="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-4 text-left"
                 >
                   {item.label}
