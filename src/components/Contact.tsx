@@ -104,7 +104,6 @@ const Contact = () => {
               <p className="text-lg text-muted-foreground group-hover:text-primary transition-colors underline decoration-primary/50 group-hover:decoration-primary">
                 Tholanur
               </p>
-              <p className="text-sm text-muted-foreground mt-2">Serving Palakkad district</p>
             </div>
           </motion.a>
         </div>

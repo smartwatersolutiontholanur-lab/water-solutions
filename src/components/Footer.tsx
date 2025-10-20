@@ -77,9 +77,12 @@ const Footer = () => {
                   smartwatersolutiontholanur@gmail.com
                 </a>
               </li>
-              <li className="flex items-center">
-                <span className="mr-2">📍</span>
-                Tholanur
+              <li className="flex items-start">
+                <span className="mr-2 mt-1">📍</span>
+                <div>
+                  <div>Tholanur</div>
+                  <div className="text-sm">Palakkad District, Kerala</div>
+                </div>
               </li>
             </ul>
           </div>
