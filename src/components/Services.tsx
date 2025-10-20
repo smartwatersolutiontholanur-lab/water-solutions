@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Droplets, Home, Building2, Wrench, Settings, Shield, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -43,36 +44,62 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Our Core Services
           </h2>
-          <div className="h-1 w-24 bg-primary mx-auto mb-6" />
+          <motion.div 
+            className="h-1 w-24 bg-primary mx-auto mb-6"
+            initial={{ width: 0 }}
+            whileInView={{ width: 96 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive water treatment solutions tailored to your needs
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card 
-                key={index} 
-                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border bg-card"
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+                whileHover={{ y: -8 }}
               >
-                <CardHeader>
-                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                <Card className="h-full hover:shadow-xl transition-all duration-300 border-border bg-card">
+                  <CardHeader>
+                    <motion.div 
+                      className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+                      whileHover={{ rotate: 360, scale: 1.1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Icon className="w-7 h-7 text-primary" />
+                    </motion.div>
+                    <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
             );
           })}
         </div>
