@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,15 +61,35 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <a
+              href="https://www.jotform.com/app/252921008500445"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors duration-200"
+              aria-label="Download"
+            >
+              <Download size={20} />
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu and Download Button */}
+          <div className="md:hidden flex items-center space-x-4">
+            <a
+              href="https://www.jotform.com/app/252921008500445"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+              aria-label="Download"
+            >
+              <Download size={20} />
+            </a>
+            <button
+              className="text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
