@@ -8,8 +8,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              <span style={{ fontFamily: "'Great Vibes', cursive" }} className="text-4xl text-white">S</span>
-              <span className="text-white ml-1">mart Water Solution</span>
+              <span style={{ fontFamily: "'Great Vibes', cursive" }} className="text-4xl text-yellow-400">S</span>
+              <span className="text-yellow-400 ml-1">mart Water Solution</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Advanced water treatment solutions for a cleaner, healthier future.

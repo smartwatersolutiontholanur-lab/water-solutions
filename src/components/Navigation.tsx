@@ -45,8 +45,8 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="text-3xl font-bold">
-              <span style={{ fontFamily: "'Great Vibes', cursive" }} className="text-5xl text-white">S</span>
-              <span className="text-white ml-1">mart Water Solution</span>
+              <span style={{ fontFamily: "'Great Vibes', cursive" }} className="text-5xl text-yellow-400">S</span>
+              <span className="text-yellow-400 ml-1">mart Water Solution</span>
             </div>
           </div>
 
