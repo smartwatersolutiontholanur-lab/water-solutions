@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              <span className="font-serif italic text-white">S</span>
+              <span style={{ fontFamily: "'Great Vibes', cursive" }} className="text-4xl text-white">S</span>
               <span className="text-white ml-1">mart Water Solution</span>
             </div>
             <p className="text-gray-400 leading-relaxed">

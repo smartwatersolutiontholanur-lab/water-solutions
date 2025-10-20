@@ -51,16 +51,23 @@ const Contact = () => {
           </a>
 
           {/* Location */}
-          <div className="bg-card border border-border rounded-lg p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <MapPin className="w-8 h-8 text-primary" />
+          <a
+            href="https://maps.app.goo.gl/kRGZXkG3G7qWM5Qa8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group"
+          >
+            <div className="bg-card border border-border rounded-lg p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                <MapPin className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Location</h3>
+              <p className="text-lg text-muted-foreground group-hover:text-primary transition-colors">
+                Tholanur
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">Serving Palakkad district</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-foreground">Location</h3>
-            <p className="text-lg text-muted-foreground">
-              Tholanur
-            </p>
-            <p className="text-sm text-muted-foreground mt-2">Serving local areas</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
