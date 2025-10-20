@@ -1,11 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Droplet } from "lucide-react";
 
 const Hero = () => {
-  const openEnquiryForm = () => {
-    window.open('https://form.jotform.com/252914257700051', '_blank');
-  };
-
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       {/* Decorative Elements */}
@@ -23,7 +18,8 @@ const Hero = () => {
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-            Pure Water Solutions
+            <span style={{ fontFamily: "'Great Vibes', cursive" }} className="text-8xl">S</span>
+            <span>mart Water Solution</span>
             <br />
             <span className="text-primary">
               Professional Excellence
@@ -32,24 +28,6 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
             Advanced water treatment systems for residential, commercial, and industrial applications
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="bg-primary hover:bg-accent text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
-              onClick={openEnquiryForm}
-            >
-              Get a Quote
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-2 border-white/80 text-white hover:bg-white hover:text-primary text-lg px-8 py-6 transition-all duration-300"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Our Services
-            </Button>
-          </div>
         </div>
       </div>
 
