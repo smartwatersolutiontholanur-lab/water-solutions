@@ -101,8 +101,11 @@ const Contact = () => {
                 <MapPin className="w-8 h-8 text-primary" />
               </motion.div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Location</h3>
-              <p className="text-lg text-muted-foreground group-hover:text-primary transition-colors underline decoration-primary/50 group-hover:decoration-primary">
+              <p className="text-lg text-muted-foreground group-hover:text-primary transition-colors">
                 Tholanur
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                Serving Palakkad District
               </p>
             </div>
           </motion.a>
