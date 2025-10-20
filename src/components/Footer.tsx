@@ -78,11 +78,18 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-start">
-                <span className="mr-2 mt-1">📍</span>
-                <div>
-                  <div>Tholanur</div>
-                  <div className="text-sm">Palakkad District, Kerala</div>
-                </div>
+                <a
+                  href="https://maps.app.goo.gl/kRGZXkG3G7qWM5Qa8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors flex items-start"
+                >
+                  <span className="mr-2 mt-1">📍</span>
+                  <div>
+                    <div>Tholanur</div>
+                    <div className="text-sm">Palakkad District, Kerala</div>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
