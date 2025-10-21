@@ -1,10 +1,24 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleFooterClick = () => {
+    const newCount = clickCount + 1;
+    setClickCount(newCount);
+    
+    if (newCount === 5) {
+      navigate("/developer");
+      setClickCount(0);
+    }
+  };
 
   return (
-    <footer className="bg-black text-gray-300 py-12">
+    <footer className="bg-black text-gray-300 py-12" onClick={handleFooterClick}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
