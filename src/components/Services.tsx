@@ -72,29 +72,42 @@ const Services = () => {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: index * 0.1,
-                  ease: "easeOut"
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                  ease: "easeOut",
+                  type: "spring",
+                  stiffness: 100
                 }}
-                whileHover={{ y: -8 }}
+                whileHover={{
+                  y: -12,
+                  scale: 1.05,
+                  transition: { duration: 0.3, type: "spring", stiffness: 300 }
+                }}
+                className="group"
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 border-border bg-card">
-                  <CardHeader>
-                    <motion.div 
-                      className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
-                      whileHover={{ rotate: 360, scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
+                <Card className="h-full hover:shadow-2xl transition-all duration-500 border-border bg-card hover:border-primary/50 relative overflow-hidden">
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <CardHeader className="relative z-10">
+                    <motion.div
+                      className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300"
+                      whileHover={{
+                        rotate: [0, -10, 10, -10, 0],
+                        scale: 1.2
+                      }}
+                      transition={{ duration: 0.5 }}
                     >
-                      <Icon className="w-7 h-7 text-primary" />
+                      <Icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300" />
                     </motion.div>
-                    <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                    <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors duration-300">{service.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base leading-relaxed">
+                  <CardContent className="relative z-10">
+                    <CardDescription className="text-base leading-relaxed group-hover:text-foreground transition-colors duration-300">
                       {service.description}
                     </CardDescription>
                   </CardContent>

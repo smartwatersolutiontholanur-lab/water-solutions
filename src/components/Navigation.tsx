@@ -44,8 +44,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="text-3xl font-bold">
-              <span style={{ fontFamily: "'Great Vibes', cursive" }} className="text-5xl text-yellow-400">S</span>
+            <div className="text-3xl font-bold cursor-pointer transition-all duration-300 hover:scale-105">
+              <span style={{ fontFamily: "'Great Vibes', cursive" }} className="text-5xl text-yellow-400 inline-block hover:rotate-12 transition-transform duration-300">S</span>
               <span className="text-yellow-400 ml-1">mart Water Solution</span>
             </div>
           </div>
@@ -56,19 +56,20 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item)}
-                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                className="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium relative group"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
             <a
               href="https://www.jotform.com/app/252921008500445"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors duration-200"
+              className="text-gray-300 hover:text-yellow-400 transition-all duration-300 hover:scale-110 inline-block"
               aria-label="Download"
             >
-              <Download size={20} />
+              <Download size={20} className="hover:animate-bounce" />
             </a>
           </div>
 
@@ -78,7 +79,7 @@ const Navigation = () => {
               href="https://www.jotform.com/app/252921008500445"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white"
+              className="text-yellow-400 hover:scale-110 transition-transform duration-300 inline-block"
               aria-label="Download"
             >
               <Download size={20} />
@@ -100,7 +101,7 @@ const Navigation = () => {
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item)}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 font-medium px-4 text-left"
+                  className="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium px-4 text-left hover:translate-x-2"
                 >
                   {item.label}
                 </button>
