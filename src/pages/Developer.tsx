@@ -50,11 +50,20 @@ const Developer = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="pt-6 space-y-3"
+            className="pt-6 pb-2"
           >
             <p className="text-sm text-muted-foreground font-mono">
               Developer ID: CV-2025-1021-001
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="pt-6 space-y-3"
+          >
+            <h3 className="text-lg font-semibold text-foreground">Contact Us</h3>
             <p className="text-sm text-muted-foreground">
               <a 
                 href="mailto:mailatcraftbyte@gmail.com" 
