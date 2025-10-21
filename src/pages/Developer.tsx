@@ -50,10 +50,28 @@ const Developer = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="pt-6 pb-2"
+            className="pt-6 space-y-3"
           >
             <p className="text-sm text-muted-foreground font-mono">
               Developer ID: CV-2025-1021-001
+            </p>
+            <p className="text-sm text-muted-foreground">
+              <a 
+                href="mailto:mailatcraftbyte@gmail.com" 
+                className="text-primary hover:underline"
+              >
+                mailatcraftbyte@gmail.com
+              </a>
+            </p>
+            <p className="text-sm text-muted-foreground">
+              <a 
+                href="https://craftbytewebsite.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                craftbytewebsite.vercel.app
+              </a>
             </p>
           </motion.div>
 
