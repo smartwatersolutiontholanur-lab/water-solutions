@@ -18,7 +18,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-gray-300 py-12" onClick={handleFooterClick}>
+    <footer className="bg-black text-gray-300 py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
@@ -137,7 +137,12 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <p className="hover:text-gray-300 transition-colors duration-300">© {currentYear} Smart Water Solution. All rights reserved.</p>
+          <p 
+            className="hover:text-gray-300 transition-colors duration-300 cursor-pointer select-none"
+            onClick={handleFooterClick}
+          >
+            © {currentYear} Smart Water Solution. All rights reserved.
+          </p>
         </motion.div>
       </div>
     </footer>

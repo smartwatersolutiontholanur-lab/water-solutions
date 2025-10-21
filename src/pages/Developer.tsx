@@ -39,6 +39,10 @@ const Developer = () => {
           </p>
 
           <p className="text-lg text-muted-foreground">
+            I'm the developer of the <span className="font-bold text-foreground">Smart Water Solution</span> website.
+          </p>
+
+          <p className="text-lg text-muted-foreground">
             We build apps, websites, automation solutions, and designs with precision and creativity.
           </p>
 
